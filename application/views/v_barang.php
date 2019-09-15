@@ -7,37 +7,37 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/jquery.dataTables.css'?>">
 </head>
 <body>
-<div class="container">
-	<!-- Page Heading -->
-        <div class="row">
-            <h1 class="page-header">Data
-                <small>Barang</small>
-				<div class="pull-right"><a href="#" class="btn btn-sm btn-success" data-toggle="modal" data-target="#ModalaAdd"><span class="fa fa-plus"></span> Tambah Barang</a></div>
-            </h1>
-        </div>
-	<div class="row">
-		<div id="reload">
-		<table class="table table-striped" id="mydata">
-			<thead>
-				<tr>
-					<th>Kode</th>
-					<th>Nama Barang</th>
-					<th>Harga</th>
-					<th style="text-align: right;">Aksi</th>
-				</tr>
-			</thead>
-			<tbody id="show_data">
-				
-			</tbody>
-		</table>
-		</div>
-	</div>
+    <div class="container">
+     <!-- Page Heading -->
+     <div class="row">
+        <h1 class="page-header">Data
+            <small>Barang</small>
+            <div class="pull-right"><a href="#" class="btn btn-sm btn-success" data-toggle="modal" data-target="#ModalaAdd"><span class="fa fa-plus"></span> Tambah Barang</a></div>
+        </h1>
+    </div>
+    <div class="row">
+      <div id="reload">
+          <table class="table table-striped" id="mydata">
+           <thead>
+            <tr>
+             <th>Kode</th>
+             <th>Nama Barang</th>
+             <th>Harga</th>
+             <th style="text-align: right;">Aksi</th>
+         </tr>
+     </thead>
+     <tbody id="show_data">
+
+     </tbody>
+ </table>
+</div>
+</div>
 </div>
 
-		<!-- MODAL ADD -->
-        <div class="modal fade" id="ModalaAdd" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
+<!-- MODAL ADD -->
+<div class="modal fade" id="ModalaAdd" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h3 class="modal-title" id="myModalLabel">Tambah Barang</h3>
@@ -73,15 +73,15 @@
                     <button class="btn btn-info" id="btn_simpan">Simpan</button>
                 </div>
             </form>
-            </div>
-            </div>
         </div>
-        <!--END MODAL ADD-->
+    </div>
+</div>
+<!--END MODAL ADD-->
 
-        <!-- MODAL EDIT -->
-        <div class="modal fade" id="ModalaEdit" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
+<!-- MODAL EDIT -->
+<div class="modal fade" id="ModalaEdit" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h3 class="modal-title" id="myModalLabel">Edit Barang</h3>
@@ -117,35 +117,35 @@
                     <button class="btn btn-info" id="btn_update">Update</button>
                 </div>
             </form>
-            </div>
-            </div>
         </div>
-        <!--END MODAL EDIT-->
+    </div>
+</div>
+<!--END MODAL EDIT-->
 
-        <!--MODAL HAPUS-->
-        <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Hapus Barang</h4>
-                    </div>
-                    <form class="form-horizontal">
-                    <div class="modal-body">
-                                          
-                            <input type="hidden" name="kode" id="textkode" value="">
-                            <div class="alert alert-warning"><p>Apakah Anda yakin mau memhapus barang ini?</p></div>
-                                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                        <button class="btn_hapus btn btn-danger" id="btn_hapus">Hapus</button>
-                    </div>
-                    </form>
-                </div>
+<!--MODAL HAPUS-->
+<div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+                <h4 class="modal-title" id="myModalLabel">Hapus Barang</h4>
             </div>
+            <form class="form-horizontal">
+                <div class="modal-body">
+
+                    <input type="hidden" name="kode" id="textkode" value="">
+                    <div class="alert alert-warning"><p>Apakah Anda yakin mau memhapus barang ini?</p></div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    <button class="btn_hapus btn btn-danger" id="btn_hapus">Hapus</button>
+                </div>
+            </form>
         </div>
-        <!--END MODAL HAPUS-->
+    </div>
+</div>
+<!--END MODAL HAPUS-->
 
 <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js'?>"></script>
 <script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
@@ -155,33 +155,54 @@
 		tampil_data_barang();	//pemanggilan fungsi tampil barang.
 		
 		$('#mydata').dataTable();
-		 
+
+        $("#harga").keypress(function (data)
+        {
+            // kalau data bukan berupa angka, tampilkan pesan error
+            if(data.which!=8 && data.which!=0 &&
+                (data.which<48 || data.which>57))
+            {
+                return false;
+            }
+        });
+
+        $("#harga2").keypress(function (data)
+        {
+            // kalau data bukan berupa angka, tampilkan pesan error
+            if(data.which!=8 && data.which!=0 &&
+                (data.which<48 || data.which>57))
+            {
+                return false;
+            }
+        });
+
+
 		//fungsi tampil barang
 		function tampil_data_barang(){
-		    $.ajax({
-		        type  : 'GET',
-		        url   : '<?php echo base_url()?>index.php/barang/data_barang',
-		        async : true,
-		        dataType : 'json',
-		        success : function(data){
-		            var html = '';
-		            var i;
-		            for(i=0; i<data.length; i++){
-		                html += '<tr>'+
-		                  		'<td>'+data[i].barang_kode+'</td>'+
-		                        '<td>'+data[i].barang_nama+'</td>'+
-		                        '<td>'+data[i].barang_harga+'</td>'+
-		                        '<td style="text-align:right;">'+
-                                    '<a href="javascript:;" class="btn btn-info btn-xs item_edit" data="'+data[i].barang_kode+'">Edit</a>'+' '+
-                                    '<a href="javascript:;" class="btn btn-danger btn-xs item_hapus" data="'+data[i].barang_kode+'">Hapus</a>'+
-                                '</td>'+
-		                        '</tr>';
-		            }
-		            $('#show_data').html(html);
-		        }
+          $.ajax({
+              type  : 'GET',
+              url   : '<?php echo base_url()?>index.php/barang/data_barang',
+              async : true,
+              dataType : 'json',
+              success : function(data){
+                  var html = '';
+                  var i;
+                  for(i=0; i<data.length; i++){
+                      html += '<tr>'+
+                      '<td>'+data[i].barang_kode+'</td>'+
+                      '<td>'+data[i].barang_nama+'</td>'+
+                      '<td>'+data[i].barang_harga+'</td>'+
+                      '<td style="text-align:right;">'+
+                      '<a href="javascript:;" class="btn btn-info btn-xs item_edit" data="'+data[i].barang_kode+'">Edit</a>'+' '+
+                      '<a href="javascript:;" class="btn btn-danger btn-xs item_hapus" data="'+data[i].barang_kode+'">Hapus</a>'+
+                      '</td>'+
+                      '</tr>';
+                  }
+                  $('#show_data').html(html);
+              }
 
-		    });
-		}
+          });
+      }
 
 		//GET UPDATE
 		$('#show_data').on('click','.item_edit',function(){
@@ -193,11 +214,11 @@
                 data : {id:id},
                 success: function(data){
                 	$.each(data,function(barang_kode, barang_nama, barang_harga){
-                    	$('#ModalaEdit').modal('show');
-            			$('[name="kobar_edit"]').val(data.barang_kode);
-            			$('[name="nabar_edit"]').val(data.barang_nama);
-            			$('[name="harga_edit"]').val(data.barang_harga);
-            		});
+                     $('#ModalaEdit').modal('show');
+                     $('[name="kobar_edit"]').val(data.barang_kode);
+                     $('[name="nabar_edit"]').val(data.barang_nama);
+                     $('[name="harga_edit"]').val(data.barang_harga);
+                 });
                 }
             });
             return false;
@@ -233,7 +254,7 @@
         });
 
         //Update Barang
-		$('#btn_update').on('click',function(){
+        $('#btn_update').on('click',function(){
             var kobar=$('#kode_barang2').val();
             var nabar=$('#nama_barang2').val();
             var harga=$('#harga2').val();
@@ -257,19 +278,19 @@
         $('#btn_hapus').on('click',function(){
             var kode=$('#textkode').val();
             $.ajax({
-            type : "POST",
-            url  : "<?php echo base_url('index.php/barang/hapus_barang')?>",
-            dataType : "JSON",
-                    data : {kode: kode},
-                    success: function(data){
-                            $('#ModalHapus').modal('hide');
-                            tampil_data_barang();
-                    }
-                });
-                return false;
+                type : "POST",
+                url  : "<?php echo base_url('index.php/barang/hapus_barang')?>",
+                dataType : "JSON",
+                data : {kode: kode},
+                success: function(data){
+                    $('#ModalHapus').modal('hide');
+                    tampil_data_barang();
+                }
             });
+            return false;
+        });
 
-	});
+    });
 
 </script>
 </body>
