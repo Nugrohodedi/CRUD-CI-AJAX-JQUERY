@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/A_REPOSITORI_LOCAL_GITHUB/CRUD-CI-AJAX/';
+$config['base_url'] = 'http://localhost/CRUD-CI-AJAX/';
 
 /*
 |--------------------------------------------------------------------------

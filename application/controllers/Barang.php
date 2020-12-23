@@ -5,7 +5,8 @@ class Barang extends CI_Controller{
 		$this->load->model('m_barang');
 	}
 	function index(){
-		$this->load->view('v_barang');
+		$data['js'] = "js-barang";
+		$this->load->view('v_barang', $data);
 	}
 
 	function data_barang(){

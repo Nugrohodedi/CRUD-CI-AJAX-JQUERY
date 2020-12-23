@@ -150,11 +150,13 @@
 <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js'?>"></script>
 <script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
 <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.dataTables.js'?>"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		tampil_data_barang();	//pemanggilan fungsi tampil barang.
-		
-		$('#mydata').dataTable();
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/script/<?php echo $js; ?>.js"></script>
+<script>
+    
+        $(document).ready(function(){
+        tampil_data_barang();   //pemanggilan fungsi tampil barang.
+        
+        $('#mydata').dataTable();
 
         $("#harga").keypress(function (data)
         {
@@ -177,8 +179,8 @@
         });
 
 
-		//fungsi tampil barang
-		function tampil_data_barang(){
+        //fungsi tampil barang
+        function tampil_data_barang(){
           $.ajax({
               type  : 'GET',
               url   : '<?php echo base_url()?>index.php/barang/data_barang',
@@ -204,8 +206,8 @@
           });
       }
 
-		//GET UPDATE
-		$('#show_data').on('click','.item_edit',function(){
+        //GET UPDATE
+        $('#show_data').on('click','.item_edit',function(){
             var id=$(this).attr('data');
             $.ajax({
                 type : "GET",
@@ -213,7 +215,7 @@
                 dataType : "JSON",
                 data : {id:id},
                 success: function(data){
-                	$.each(data,function(barang_kode, barang_nama, barang_harga){
+                    $.each(data,function(barang_kode, barang_nama, barang_harga){
                      $('#ModalaEdit').modal('show');
                      $('[name="kobar_edit"]').val(data.barang_kode);
                      $('[name="nabar_edit"]').val(data.barang_nama);
@@ -225,15 +227,15 @@
         });
 
 
-		//GET HAPUS
-		$('#show_data').on('click','.item_hapus',function(){
+        //GET HAPUS
+        $('#show_data').on('click','.item_hapus',function(){
             var id=$(this).attr('data');
             $('#ModalHapus').modal('show');
             $('[name="kode"]').val(id);
         });
 
-		//Simpan Barang
-		$('#btn_simpan').on('click',function(){
+        //Simpan Barang
+        $('#btn_simpan').on('click',function(){
             var kobar=$('#kode_barang').val();
             var nabar=$('#nama_barang').val();
             var harga=$('#harga').val();
